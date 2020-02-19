@@ -1,0 +1,15 @@
+
+$(document).ready(function() {   
+
+var htmlStr = $('#ou-link').html();
+	$('#directedit').html(htmlStr);
+	
+	
+});
+
+$(window).load(function() {
+    $('#slider').nivoSlider({
+        effect: 'fade',
+        pauseTime: 7000
+    });
+});
