@@ -1,0 +1,574 @@
+@charset "UTF-8";
+/* Slider */
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+
+/* Could not reference these directly from sxu.edu website, but these should be updated to use existing font families, as available */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('https://satinflame.com/ou/sxu/banner/includes/fonts/glyphicons/glyphicons-halflings-regular.eot');
+  src: url('https://satinflame.com/ou/sxu/banner/includes/fonts/glyphicons/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('https://satinflame.com/ou/sxu/banner/includes/fonts/glyphicons/glyphicons-halflings-regular.woff') format('woff'), url('https://satinflame.com/ou/sxu/banner/includes/fonts/glyphicons/glyphicons-halflings-regular.ttf') format('truetype'), url('https://satinflame.com/ou/sxu/banner/includes/fonts/glyphicons/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+@font-face {
+  font-family: 'Akzidenz-Grotesk';
+  src: url('https://satinflame.com/ou/sxu/banner/includes/fonts/Akzidenz-Grotesk/Akzidenz-grotesk-r-schulbuch-regular.ttf');
+  src: url('https://satinflame.com/ou/sxu/banner/includes/fonts/Akzidenz-Grotesk/Akzidenz-grotesk-r-schulbuch-regular.ttf') format('truetype')
+}
+
+#interior-head.show-carousel { display: block; margin-top: 0;}
+.slick-loading .slick-list {
+  background: #fff url("../../images/banners/ajax-loader.gif") center center no-repeat;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  /* width: 20px; */
+  height: 20px;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: transparent;
+  outline: none;
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -25px;
+}
+
+[dir='rtl'] .slick-prev {
+  right: -25px;
+  left: auto;
+}
+
+.slick-prev:before {
+  content: '\2190';
+}
+
+[dir='rtl'] .slick-prev:before {
+  content: '\2192';
+}
+
+.slick-next {
+  right: -25px;
+}
+
+[dir='rtl'] .slick-next {
+  right: auto;
+  left: -25px;
+}
+
+.slick-next:before {
+  content: '\2192';
+}
+
+[dir='rtl'] .slick-next:before {
+  content: '\2190';
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+ 
+/* Slider */
+main .slick-slider ul li:before {
+  content: none;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  clear: both;
+}
+
+.slick-slider ul,
+.slick-slider li {
+  list-style-type: none;
+}
+
+.slick-slider ul li,
+.slick-slider li li {
+  padding-left: 0;
+  text-indent: 0;
+}
+
+.slick-slider ul li:before,
+.slick-slider li li:before {
+  display: none;
+}
+.slick-slider .slick-prev.slick-arrow:before, 
+.slick-slider .slick-next.slick-arrow:before {
+  display: none;
+}
+.slick-slider .slick-prev.slick-arrow .glyphicon,
+.slick-slider .slick-next.slick-arrow .glyphicon {
+  opacity: .5;
+  color: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-weight: 900;
+  font-size: 30px;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+  padding: 0 15px;
+}
+.slick-slider .slick-prev.slick-arrow:focus .glyphicon,
+.slick-slider .slick-next.slick-arrow:focus .glyphicon {
+  opacity: 1;
+}
+
+.slick-next, .slick-prev { 
+  text-align: center;
+  padding: 0 20px;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .slick-slider .slick-next, .slick-slider .slick-prev {
+    padding: 0 10px;
+  }
+  .slick-slider .slick-prev.slick-arrow .glyphicon,
+  .slick-slider .slick-next.slick-arrow .glyphicon {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .slick-slider .slick-next, .slick-slider .slick-prev {
+    padding: 0 20px;
+    height: 60px;
+  }
+  .slick-slider .slick-prev.slick-arrow .glyphicon,
+  .slick-slider .slick-next.slick-arrow .glyphicon {
+    font-size: 48px;
+  }
+}
+
+.slick-next {
+  right: 5px;
+}
+
+.slick-prev {
+  left: 5px;
+}  
+
+.slick-slider * {
+  min-height: 0;
+  min-width: 0;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  clear: both;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 100%;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+  width: 100%;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+  position: relative;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+.slick-slider > div > .caption,
+.slick-slider > div {
+  display: none;
+  opacity: 0;
+}
+
+.slick-slider > div:first-child {
+  display: block;
+}
+
+.slick-slider.slick-initialized > div,
+.slick-slider.content-feature > div:first-child {
+  display: block;
+  opacity: 1;
+}
+  
+
+.slick-slider.slick-initialized {
+  background-image: none;
+}
+
+.slick-slider.slick-initialized:hover {
+  background: none;
+} 
+.carousel-slider {
+  height: auto;
+}
+
+.carousel-slider.slick-slider {
+  position: relative;
+  background-position: 50% 50%;
+  background-image: url("../../images/banners/ajax-loader.gif");
+  background-repeat: no-repeat;
+  min-height: 30vw;
+}
+
+.carousel-slider .slick-slide {
+  cursor: pointer;
+}
+
+.slider-overlay .carousel-feature-img:before  {
+  content: "";
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  display: block;
+  opacity: 1;
+  top: 0;
+  position: absolute;
+  z-index: 5;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+1,060040+100,36379b+100,000000+100&0.03+0,0.5+0,0.5+100 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 1%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 1%,rgba(0,0,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 1%,rgba(0,0,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
+}
+
+@media (min-width: 580px) {
+  .slider-overlay .carousel-feature-img:before {
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+33,ffffff+66&1+0,0.5+33,0.03+66,0.03+100 */
+background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(255,255,255,0.03) 66%, rgba(255,255,255,0.03) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 33%,rgba(255,255,255,0.03) 66%,rgba(255,255,255,0.03) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 33%,rgba(255,255,255,0.03) 66%,rgba(255,255,255,0.03) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#08ffffff',GradientType=1 ); /* IE6-9 */
+  }
+
+  .slider-overlay.caption-right .carousel-feature-img:before {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+33,000000+66,060040+100,36379b+100,000000+100&0.03+0,0.03+33,0.5+66,1+100 */
+background: -moz-linear-gradient(left, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 33%, rgba(0,0,0,0.5) 66%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.03) 33%,rgba(0,0,0,0.5) 66%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.03) 33%,rgba(0,0,0,0.5) 66%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08ffffff', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+  }
+
+}
+
+/* homepage */
+.carousel-feature-img {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+.slick-slider .caption-container {
+  width: 100%;
+  max-width: 400px;
+    position: absolute;
+    top: 0;
+    bottom: 0; 
+    left: 0;
+    right: 0; 
+    margin: 0 auto;
+}
+.carousel-feature-text {
+   font-family: 'Akzidenz-Grotesk', 'Open Sans',sans-serif;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: absolute;
+  
+  
+    left: auto;
+  z-index: 6;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0;
+  line-height: 1.1;
+  text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+  flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+  justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+}
+.caption-right .carousel-feature-text {
+  left: auto;
+  right: 0;
+}
+
+.carousel-feature-text a:hover {
+  text-decoration: none;
+}
+
+.carousel-feature-text .btn {
+  font-family: 'Bebas Neue', "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* -webkit-box-shadow: -1px 1px 8px 6px rgba(0, 0, 0, 0.4);
+          box-shadow: -1px 1px 8px 6px rgba(0, 0, 0, 0.4); */
+  background-color: #8d2337;
+  border-color: #8d2337;
+  color: #fff; 
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: background-color .2s ease-in-out;
+  margin-top: 1rem;
+  font-size: 18px;
+  border-radius: 0;
+  letter-spacing: .05em;
+}
+.carousel-feature-text .btn:hover, .carousel-feature-text .btn:focus {
+  background-color: #791e2f;
+}
+
+.carousel-feature-text p {
+  text-align: center;
+  width: 100%;
+}
+
+.carousel-feature-title {
+  font-size: 24px;
+  letter-spacing: .05em;
+  text-align: center;
+  line-height: 1.1;
+  max-width: none;
+  font-family: 'Bebas Neue', "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: normal;
+  font-style: normal;
+  color: #fff;
+  display: block;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.carousel-feature-title a {
+  text-decoration: none;
+  color: #fff;
+}
+ 
+
+.carousel-feature-caption {
+  display: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: normal;
+  margin-top: 0;
+}
+@media (min-width: 580px) {
+  .carousel-feature-text {
+    width: 50%;
+    left: 0;
+    padding: 1rem 2rem;
+    /* width: 65%; */
+    /* padding-left: 6rem;
+    padding-right: 6rem;
+    padding-bottom: 10vh; */
+  }
+  .carousel-feature-title {
+    font-size: 30px;
+  }
+  .caption-right .carousel-feature-text {
+    left: auto;
+  }
+  /* .carousel-feature-title {
+    font-size: 2rem;
+  }  */
+}
+@media (min-width: 768px) {
+  .slick-slider .caption-container {
+    max-width: 700px;
+  }  
+  .carousel-feature-title {
+    font-size: 36px;
+  }
+  .carousel-feature-text .btn {
+    font-size: 24px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .carousel-feature-caption {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .slick-slider .caption-container {
+    max-width: 900px;
+  }
+  .carousel-feature-text {
+    /* padding-right: 0; */
+    /* padding-top: 2vh;
+    padding-bottom: 2vh; */
+    width: 50%;
+    
+  }
+  .carousel-feature-title {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 1236px) {
+  .slick-slider .caption-container {
+    max-width: 1600px;
+  }
+  .carousel-feature-text {
+    width: 50%;
+    max-width: 706.28571429px;
+  }
+  .carousel-feature-caption { font-size: 17px; }
+  .carousel-feature-title {
+    font-size: 54px;
+  } 
+}
+@media (min-width: 1660px) {
+  .slick-slider .caption-container {
+    max-width: 1600px;
+  }
+}
+ 
+ 
+@media (min-width: 1236px) {
+  .carousel-slider .slick-slide, .carousel-slider.slick-slider {
+    min-height: 330px;
+    max-height: 500px;
+  }
+  .carousel-slider .slick-slide img {
+    margin-top: -10vh;
+  }
+}

@@ -42,7 +42,9 @@
 
 
 <!-- Custom CSS -->
-	<link href="./About SXU _ Saint Xavier University_files/carousel.css" rel="stylesheet">
+  <link href="./About SXU _ Saint Xavier University_files/carousel.css" rel="stylesheet">
+
+<link rel="stylesheet" href="./includes/css/slick.css?v=2"> 
 
 <!-- Javascript -->
 
@@ -381,7 +383,7 @@ gtag('config', 'UA-20270445-7', { 'optimize_id': 'GTM-K5GSP7L'});
 							<ul>
 								<li><a href="https://www.sxu.edu/academics/provost/index.asp">Office of the Provost</a></li>
 								<li><a href="https://www.sxu.edu/academics/resources/records-advising/academic-calendar.asp">Academic Calendar</a></li>
-								<li><a href="https://www.sxu.edu/catalog/index.asp">Academic Catalog</a></li>
+								<li><a href="https://www.sxu.edu/admissions/undergraduate/index.asp">Academic admissions/undergraduate</a></li>
 								<li><a href="https://www.bkstr.com/saintxavierstore/home/en" target="blank">Bookstore</a></li>
 								<li><a href="https://www.sxu.edu/academics/resources/cidat/">Center for Instructional Design and Academic Technology</a></li>
 								<li><a href="https://claws.sxu.edu/WebAdvisor/WebAdvisor?CONSTITUENCY=XWBAP&amp;type=P&amp;pid=ST-XCRWESTS12ACT" target="blank">Course Offerings</a></li>
@@ -490,12 +492,80 @@ gtag('config', 'UA-20270445-7', { 'optimize_id': 'GTM-K5GSP7L'});
 	</div>
 
    <!-- /com.omniupdate.div -->
-   <div id="interior-head">
+   <div id="interior-head" class="show-carousel">
       
       <!-- com.omniupdate.div label="Banner Static Image" group="Everyone" button="hide" -->
-      <!-- ouc:multiedit type="image" prompt="Photo" alt="Choose a photo for banner." path="/images/" lockout="no"/ --><img src="./About SXU _ Saint Xavier University_files/shield-header.jpg" alt="Saint Xavier University Chicago Campus">
+      <!-- ouc:multiedit type="image" prompt="Photo" alt="Choose a photo for banner." path="/images/" lockout="no"/ -->
+      <!-- <img src="./About SXU _ Saint Xavier University_files/shield-header.jpg" alt="Saint Xavier University Chicago Campus"> -->
       <!-- /com.omniupdate.div -->
       
+      <section class="slick-slider carousel-slider link-unstyled" aria-labelledby="carouselheading">
+        <h2 id="carouselheading" class="sr-only">Featured news</h2>
+        <div class="slide slider-overlay caption-right">
+          <img src="./images/banners/web-header-960x347.jpg" alt="a student smiles while standing in from of SXU archway" />
+          <div class="carousel-feature-img">
+            <div class="caption-container">
+              <div class="carousel-feature-text">
+                <p><a href="https://www.sxu.edu/admissions/undergraduate/">
+                    <span class="carousel-feature-title"><strong>Calling all Doers.</strong></span> <span
+                      class="carousel-feature-caption">We want to hear from you!<br/> Let us know on social media what you're doing.</span> </a></p>
+                        <p><a href="https://www.sxu.edu/admissions/undergraduate" class="btn btn-primary">Discover the Best in You</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide slider-overlay">
+          <img src="./images/banners/web-transfer-960x347.jpg" alt="a student smiling while in a study hall" />
+          <div class="carousel-feature-img">
+            <div class="caption-container">
+              <div class="carousel-feature-text">
+                <p><a href="https://www.sxu.edu/admissions/">
+                    <span class="carousel-feature-title"><strong>Transfer Day</strong></span> <span
+                      class="carousel-feature-caption">Calling All Transfer Students. <br/>Sign up on Wednesday, October 16, 2019
+                        activities.</span> </a></p>
+                        <p><a href="https://www.sxu.edu/admissions/" class="btn btn-primary">Register Now</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="./images/banners/shield-header-960x347.jpg" alt="a view of campus with flowers" />
+          <div class="carousel-feature-img">
+            <div class="caption-container">
+              <div class="carousel-feature-text">
+                
+              </div>
+            </div>
+          </div>
+        </div> 
+
+      
+      <div class="slide slider-overlay">
+        <img src="./images/banners/web-transfer-960x347.jpg" alt="a student smiling while in a study hall" />
+        <div class="carousel-feature-img">
+          <div class="caption-container">
+            <div class="carousel-feature-text">
+              <p><a href="https://www.sxu.edu/admissions/">
+                <span class="carousel-feature-title"><strong>Text only</strong></span> <span
+                  class="carousel-feature-caption">With a subtitle</span> </a></p>
+            </div>
+          </div>
+        </div>
+      </div> 
+      
+      <div class="slide">
+        <img src="./images/banners/shield-header-960x347.jpg" alt="a view of campus with flowers" />
+        <div class="carousel-feature-img">
+          <div class="caption-container">
+            <div class="carousel-feature-text">
+              <p><a href="https://www.sxu.edu/admissions/" class="btn btn-primary">Button Only</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
       
    </div>
    <div id="content" class="container">
@@ -752,6 +822,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 		document.createElement("section");
 
 	</script>
+
+  
+<script src="./includes/js/slick.min.js"></script>
+<script src="./includes/js/slick-app.js"></script>
 
 	<!-- Facebook Pixel Code - SXU (RN to BSN) for ticket #44239 -->
 	<div id="ttdUniversalPixelTagfc8114549457415da13018bbb68bf5ca" style="display:none">
